@@ -29,17 +29,6 @@ services:
         networks: 
             - app-network
 
-    order-service:
-        image: shouvik78/order-service:1.0
-        ports: 
-            - "5000:5000"
-        environment: 
-            EUREKA_HOST: eureka-server
-        depends_on: 
-            - eureka-server
-        networks: 
-            - app-network
-
     api-gateway-server:
         image: shouvik78/api-gateway-server:1.0
         ports: 
