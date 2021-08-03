@@ -28,19 +28,7 @@ services:
             - eureka-server
         networks: 
             - app-network
-
-    api-gateway-server:
-        image: shouvik78/api-gateway-server:1.0
-        ports: 
-            - "8888:8888"
-        environment: 
-            EUREKA_HOST: eureka-server
-        depends_on: 
-            - eureka-server
-        networks: 
-            - app-network
         
-
 
 networks: 
     app-network:
