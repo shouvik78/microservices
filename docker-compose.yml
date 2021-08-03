@@ -1,14 +1,14 @@
 version: '3.7'
 services: 
     eureka-server:
-        image: eureka-server
+        image: shouvik78/eureka-server:1.0
         ports: 
             - "8761:8761"
         networks: 
             - app-network
     
     menu-item-service:
-        image: menu-item-service
+        image: shouvik78/menu-item-service:1.0
         ports: 
             - "5100:5100"
         environment: 
@@ -19,7 +19,7 @@ services:
             - app-network
 
     coupon-service:
-        image: coupon-service
+        image: shouvik78/coupon-service:1.0
         ports: 
             - "5200:5200"
         environment: 
@@ -30,7 +30,7 @@ services:
             - app-network
 
     order-service:
-        image: order-service
+        image: shouvik78/order-service:1.0
         ports: 
             - "5000:5000"
         environment: 
@@ -44,4 +44,3 @@ services:
 
 networks: 
     app-network:
-        
